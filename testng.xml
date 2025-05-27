@@ -3,10 +3,6 @@
     <test name="Login Tests">
         <classes>
             <class name="LoginTest">
-                <methods>
-                    <include name="browserLaunch"/>
-                    <include name="verifyLoginRegisterCTA"/>
-                </methods>
             </class>
         </classes>
     </test>
