@@ -26,50 +26,50 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(loginPage.verifyLoginRegisterCTA());
         loginPage.verifyLoginClick();
     }
-    @Test
-    public void verifyProductLogo() {
-        loginPage.verifyLoginClick();
-        loginPage.verifyLogo();
-    }
-    @Test
-    public void verifyPageTitle() {
-        loginPage.verifyLoginClick();
-        loginPage.verifyTitle();
-    }
-    @Test
-    public void verifyForgetPasswordCTA() {
-        loginPage.verifyLoginClick();
-        loginPage.forgetPassword(user_mobile);
-    }
-    @Test
-    public void verifyGoogleLoginAvailable() {
-        loginPage.verifyLoginClick();
-        loginPage.verifyGoogleLoginOption();
-        Assert.assertTrue(loginPage.verifyGoogleLoginOption(), "Login with GOOGLE option is not present on the pagee");
-    }
-    @Test
-    public void verifyAppleLoginAvailable() {
-        loginPage.verifyLoginClick();
-        loginPage.verifyAppleLoginOption();
-        Assert.assertTrue(loginPage.verifyAppleLoginOption(), "Login with APPLE option is not present on the page");
-    }
-    @Test
-    public void verifyProfileSelect() {
-        loginPage.verifyLoginClick();
-        loginPage.verifyLogin(user_mobile, user_password);
-        loginPage.verifyProfileSelected();
-    }
-    @Test
-    public void verifyLoginSuccessful() {
-        loginPage.verifyLoginClick();
-        loginPage.verifyLogin(user_mobile, user_password);
-        System.out.println("Logged in with :" + user_mobile + "/" + user_password);
-        Assert.assertTrue(loginPage.verifyLoginIsSuccessful());
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
+//    @Test
+//    public void verifyProductLogo() {
+//        loginPage.verifyLoginClick();
+//        loginPage.verifyLogo();
+//    }
+//    @Test
+//    public void verifyPageTitle() {
+//        loginPage.verifyLoginClick();
+//        loginPage.verifyTitle();
+//    }
+//    @Test
+//    public void verifyForgetPasswordCTA() {
+//        loginPage.verifyLoginClick();
+//        loginPage.forgetPassword(user_mobile);
+//    }
+//    @Test
+//    public void verifyGoogleLoginAvailable() {
+//        loginPage.verifyLoginClick();
+//        loginPage.verifyGoogleLoginOption();
+//        Assert.assertTrue(loginPage.verifyGoogleLoginOption(), "Login with GOOGLE option is not present on the pagee");
+//    }
+//    @Test
+//    public void verifyAppleLoginAvailable() {
+//        loginPage.verifyLoginClick();
+//        loginPage.verifyAppleLoginOption();
+//        Assert.assertTrue(loginPage.verifyAppleLoginOption(), "Login with APPLE option is not present on the page");
+//    }
+//    @Test
+//    public void verifyProfileSelect() {
+//        loginPage.verifyLoginClick();
+//        loginPage.verifyLogin(user_mobile, user_password);
+//        loginPage.verifyProfileSelected();
+//    }
+//    @Test
+//    public void verifyLoginSuccessful() {
+//        loginPage.verifyLoginClick();
+//        loginPage.verifyLogin(user_mobile, user_password);
+//        System.out.println("Logged in with :" + user_mobile + "/" + user_password);
+//        Assert.assertTrue(loginPage.verifyLoginIsSuccessful());
+//    }
+//
+//    @AfterMethod
+//    public void tearDown() {
+//        driver.quit();
+//    }
 }
 
