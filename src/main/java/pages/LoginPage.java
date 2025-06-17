@@ -83,7 +83,6 @@ public class LoginPage {
         return new PlayerScreenPage(driver);
     }
 
-
     public AssetDetailsPage assetDetailsPage(String Username, String Password) {
         LoginRegisterCTA.click();
         mobileNumber.sendKeys(Username);

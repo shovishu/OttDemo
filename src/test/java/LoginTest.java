@@ -10,8 +10,8 @@ import java.lang.reflect.Method;
 
 public class LoginTest extends BaseTest {
 
-    public String user_mobile = ConfigReader.getProperty("mobileNumber");
-    public String user_password = ConfigReader.getProperty("password");
+    public String userMobile = ConfigReader.getProperty("mobileNumber");
+    public String userPassword = ConfigReader.getProperty("password");
     LoginPage loginPage;
 
     @BeforeMethod
@@ -39,7 +39,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void verifyForgetPasswordCTA() {
         loginPage.verifyLoginClick();
-        loginPage.forgetPassword(user_mobile);
+        loginPage.forgetPassword(userMobile);
     }
     @Test
     public void verifyGoogleLoginAvailable() {
@@ -56,14 +56,14 @@ public class LoginTest extends BaseTest {
     @Test
     public void verifyProfileSelect() {
         loginPage.verifyLoginClick();
-        loginPage.verifyLogin(user_mobile, user_password);
+        loginPage.verifyLogin(userMobile, userPassword);
         loginPage.verifyProfileSelected();
     }
     @Test
     public void verifyLoginSuccessful() {
         loginPage.verifyLoginClick();
-        loginPage.verifyLogin(user_mobile, user_password);
-        System.out.println("Logged in with :" + user_mobile + "/" + user_password);
+        loginPage.verifyLogin(userMobile, userPassword);
+        System.out.println("Logged in with :" + userMobile + "/" + userPassword);
         Assert.assertTrue(loginPage.verifyLoginIsSuccessful());
     }
 
