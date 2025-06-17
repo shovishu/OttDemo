@@ -22,8 +22,10 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                def deployEnv = 'staging'
-                echo "Deploying to ${deployEnv} environment..."
+                script {
+                    def deployEnv = 'staging'
+                    echo "Deploying to ${deployEnv} environment..."
+                }
             }
         }
     }
